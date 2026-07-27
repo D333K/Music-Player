@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Player</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="article-info">
+        <h1 id="title">Music Player</h1>
+        <p><span>song name</span> <span id="song-name"></span></p>
+        <p><span>artist name</span> <span id="artist-name"></span></p>
+      </div>
+
+      <div class="btn-control">
+        <button id="previous-btn">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-step-back-icon lucide-step-back"
+          >
+            <path
+              d="M13.971 4.285A2 2 0 0 1 17 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z"
+            />
+            <path d="M21 20V4" />
+          </svg>
+        </button>
+
+        <button id="play-pause">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-pause-icon lucide-pause"
+          >
+            <rect x="14" y="3" width="5" height="18" rx="1" />
+            <rect x="5" y="3" width="5" height="18" rx="1" />
+          </svg>
+        </button>
+
+        <button id="next-btn">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-step-forward-icon lucide-step-forward"
+          >
+            <path
+              d="M10.029 4.285A2 2 0 0 0 7 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z"
+            />
+            <path d="M3 4v16" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="playlist">
+        <h2>playlist</h2>
+        <!-- <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p> -->
+      </div>
+
+      <div class="song-info">
+        <p><span>status</span> <span id="status-song">nothing</span></p>
+        <p><span>current song</span> <span id="current-song">nothing</span></p>
+        <p><span>repeat</span> <span id="repeat-song">OFF</span></p>
+        <p><span>shuffle</span> <span id="shuffle-song">OFF</span></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 DK. All Rights Reserved</p>
+      <p>Created By <a href="mailto:dside1272@gmail.com">Dark Knight</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+<!-- 
+Previous SVG:
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="lucide lucide-step-back-icon lucide-step-back"
+>
+  <path
+    d="M13.971 4.285A2 2 0 0 1 17 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z"
+  />
+  <path d="M21 20V4" />
+</svg>
+-->
+
+<!-- 
+Play SVG:
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="lucide lucide-play-icon lucide-play"
+>
+  <path
+    d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
+  />
+</svg>
+-->
+
+<!-- 
+  Pause SVG:
+  
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="lucide lucide-pause-icon lucide-pause"
+>
+  <rect x="14" y="3" width="5" height="18" rx="1" />
+  <rect x="5" y="3" width="5" height="18" rx="1" />
+</svg>
+-->
+
+<!-- 
+Next SVG:
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="lucide lucide-step-forward-icon lucide-step-forward"
+>
+  <path
+    d="M10.029 4.285A2 2 0 0 0 7 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z"
+  />
+  <path d="M3 4v16" />
+</svg>
+-->

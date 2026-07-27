@@ -1,0 +1,135 @@
+*{
+    text-transform: capitalize;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Courier New';
+    /* color: #fff; */
+}
+
+body{
+    width: 99%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000;
+    background-image: radial-gradient(circle at 10% 10%, #0000ff 10%, transparent 50%),
+                        radial-gradient(circle at 90% 20%, #fff 20%, transparent 50%),
+                        radial-gradient(circle at 50% 90%, #40cc40 30%, transparent 50%); */
+}
+
+.container{
+    /* width: 90%; */ /* This width for mobile responsive */
+    width: 60%;
+    min-height: 600px;
+    padding: 20px;
+    border: 2px solid #0000ff;
+    border-radius: 12px;
+}
+
+#title{
+    text-align: center;
+    line-height: 1.6;
+    border-bottom: 2px solid #40cc40;
+}
+
+.article-info p{
+    font-weight: 600;
+}
+
+.article-info span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn-control{
+    /* display: grid; */
+    display: flex;
+    justify-content: space-around;
+    /* grid-template-columns: repeat(3, 1fr); */
+    margin: 35px 0;
+    padding: 10px 0;
+    border: 2px solid #40cc40;
+    border-radius: 14px;
+    /* border-top: 1px solid #40cc40; */
+    /* border-bottom: 1px solid #40cc40; */
+}
+
+.btn-control button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.btn-control button:hover{
+    background-color: #00000069;
+}
+
+.btn-control button:hover svg{
+    fill: #fff;
+}
+
+.playlist{
+    min-height: 100px;
+    margin: 10px 0;
+}
+
+.playlist button{
+    display: block;
+    padding: 5px 0 10px 20px;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.playlist button:hover{
+    font-weight: 600;
+
+}
+
+.playlist button:active{
+    color: #00000069;
+}
+
+.song-info{
+    padding: 10px 0 10px 10px;
+    border: 2px solid #40cc40;
+    border-radius: 8px;
+    /* border-top: 1px solid #40cc40;
+    border-bottom: 1px solid #40cc40; */
+}
+
+#status-song, #current-song, #repeat-song, #shuffle-song, #song-name, #artist-name{
+    /* color: #40cc40; */
+    color: #0000ff;
+    font-weight: 600;
+}
+
+footer{
+    margin-top: 40px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: .4;
+    font-size: 16px;
+}
+
+footer p{
+    margin: 10px;
+    color: #0000ff;
+}
+
+footer a{
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+}
+
+footer a:hover{
+    color: #40cc40;
+}
