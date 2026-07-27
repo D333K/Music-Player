@@ -42,7 +42,7 @@ body{
 
 .article-info span{
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .btn-control{
@@ -88,7 +88,6 @@ body{
 
 .playlist button:hover{
     font-weight: 600;
-
 }
 
 .playlist button:active{
@@ -137,6 +136,11 @@ footer a:hover{
 @media (max-width: 480px){
     .container{
         width: 90%;
-
+    }
+    .article-info span{
+        font-weight: 900;
+    }
+    .playlist button:hover{
+        font-weight: 900;
     }
 }
