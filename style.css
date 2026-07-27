@@ -37,12 +37,12 @@ body{
 }
 
 .article-info p{
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .article-info span{
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .btn-control{
@@ -98,12 +98,9 @@ body{
     padding: 10px 0 10px 10px;
     border: 2px solid #40cc40;
     border-radius: 8px;
-    /* border-top: 1px solid #40cc40;
-    border-bottom: 1px solid #40cc40; */
 }
 
 #status-song, #current-song, #repeat-song, #shuffle-song, #song-name, #artist-name{
-    /* color: #40cc40; */
     color: #0000ff;
     font-weight: 600;
 }
@@ -137,10 +134,15 @@ footer a:hover{
     .container{
         width: 90%;
     }
-    .article-info span{
+    .article-info p{
         font-weight: 900;
     }
     .playlist button:hover{
+        font-weight: 900;
+    }
+
+    #status-song, #current-song, #repeat-song, #shuffle-song, #song-name, #artist-name{
+        color: #0000ff;
         font-weight: 900;
     }
 }
