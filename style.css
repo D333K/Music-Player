@@ -133,3 +133,10 @@ footer a{
 footer a:hover{
     color: #40cc40;
 }
+
+@media (max-width: 480px){
+    .container{
+        width: 90%;
+
+    }
+}
