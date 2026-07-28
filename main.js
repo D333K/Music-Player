@@ -6,7 +6,7 @@ const play_pause_btn = document.getElementById("play-pause");
 const next_btn = document.getElementById("next-btn");
 
 let conver_svg = false;
-const play_svg = `
+const pause_svg = `
     <svg
         width="24"
         height="24"
@@ -24,7 +24,7 @@ const play_svg = `
     </svg>
 `;
 
-const pause_svg = `
+const play_svg = `
     <svg
         width="24"
         height="24"
