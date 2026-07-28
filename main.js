@@ -121,7 +121,7 @@ let playlist_content = [
         artist: "alina baraz - floating ft. khalid",
         current_status: "idle",
         id: 0,
-        song_src: "Music/Alina Baraz - Floating ft. Khalid (Official Audio) [m8t5mqYO9Yc].webm",
+        song_src: "Music/Alina Baraz - Floating ft. Khalid (filous Remix) [Official Audio] [d2ftOyb9FVs].webm",
         song_btn: document.createElement("button"),
 
     },
