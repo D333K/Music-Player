@@ -134,6 +134,15 @@ let playlist_content = [
         song_btn: document.createElement("button"),
 
     },
+    // {
+    //     name: "attention",
+    //     artist: "charle path",
+    //     current_status: "idle",
+    //     id: 0,
+    //     song_src: "https://open.spotify.com/track/5cF0dROlMOK5uNZtivgu50?si=62f573a4788a4e35",
+    //     song_btn: document.createElement("button"),
+
+    // },
 
 ];
 
@@ -186,7 +195,6 @@ playlist_content.forEach((songs_event, index) => {
             audio.play();
             
             songs_event.current_status = "live";
-            
             current_song.innerText = current_index + 1;
             duplicate_code();
             
@@ -199,8 +207,8 @@ playlist_content.forEach((songs_event, index) => {
 previous_btn.addEventListener("click", () => {
     previous_song();
 
-    current_song.innerText = current_index + 1;
     playlist_content[current_index].current_status = "live";
+    current_song.innerText = current_index + 1;
     duplicate_code();
     
     conver_svg = true;
@@ -228,8 +236,8 @@ play_pause_btn.addEventListener("click", () => {
         play_pause_btn.innerHTML = pause_svg;
         audio.pause();
         
-        current_song.innerText = current_index + 1;
         playlist_content[current_index].current_status = "pause";
+        current_song.innerText = current_index + 1;
         duplicate_code();
         
     }
@@ -239,8 +247,8 @@ play_pause_btn.addEventListener("click", () => {
 next_btn.addEventListener("click", () => {
     next_song();
 
-    current_song.innerText = current_index + 1;    
     playlist_content[current_index].current_status = "live";
+    current_song.innerText = current_index + 1;
     duplicate_code();
 
     conver_svg = true;
@@ -253,6 +261,7 @@ audio.addEventListener("timeupdate",() => {
     if(audio.currentTime >= audio.duration){
         next_song();
         playlist_content[current_index].current_status = "live";
+        current_song.innerText = current_index + 1;
         duplicate_code();
     }
 
