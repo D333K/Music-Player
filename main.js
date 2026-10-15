@@ -181,7 +181,7 @@ last_music = [
 
 ];
 
-let duplicate_code = function(){
+const duplicate_code = () => {
 
     song_name.innerText = playlist_content[current_index].name;
     artist_name.innerText = playlist_content[current_index].artist;
@@ -309,7 +309,7 @@ audio.addEventListener("timeupdate",() => {
 
 });
 
-let next_song = function(){
+const next_song = () => {
 
     current_index = (current_index + 1) % playlist_content.length;
     audio.src = playlist_content[current_index].song_src;
@@ -321,7 +321,7 @@ let next_song = function(){
     });
 }
 
-let previous_song = function(){
+const previous_song = () => {
 
     current_index = (current_index - 1 + playlist_content.length) % playlist_content.length;
     audio.src = playlist_content[current_index].song_src;
