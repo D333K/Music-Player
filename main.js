@@ -130,6 +130,16 @@ let playlist_content = [
         song_btn: document.createElement("button"),
         
     },
+    {
+
+        id: 0,
+        name: "i will survive",
+        artist: "demi lovato",
+        current_status: "idle",
+        song_src: "Music/Demi Lovato - I Will Survive (Lyrics)(MP3_160K).mp3",
+        song_btn: document.createElement("button"),
+
+    },
     // {
 
         //     id: 0,
