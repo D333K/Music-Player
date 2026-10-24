@@ -231,28 +231,44 @@ playlist_content.forEach((songs_event, index) => {
         last_music[1].id = songs_event.id;
         last_music[1].artist = songs_event.artist;
         last_music[1].song_src = songs_event.song_src;
-
+        
+        current_index = index;
+        
         if(last_music[0].id == last_music[1].id){
 
-            current_index = index;
-
             audio.src = last_music[0].song_src;
+            playlist_content[current_index].song_btn.style.cssText = 
+                `
+                    color: #0000ff;
+                    font-weight: 600;
+                `;
             audio.play();
             
             songs_event.current_status = "live";
             current_song.innerText = current_index + 1;
             duplicate_code();
+            
+        }else if(last_music[0].id != last_music[1].id){
 
-        }else if(last_music[0].id != last_music[1].id){    
-
+            playlist_content[last_music[0].id - 1].song_btn.style.cssText =
+                `
+                    color: #000000;
+                    font-weight: none;
+                `;
+            
             last_music[0].id = last_music[1].id;
-            current_index = index;
             
             last_music[0].name = last_music[1].name;
             last_music[0].artist = last_music[1].artist;
             last_music[0].song_src = last_music[1].song_src;
             
             audio.src = last_music[0].song_src;
+
+            playlist_content[current_index].song_btn.style.cssText = 
+                `
+                    color: #0000ff;
+                    font-weight: 600;
+                `;
             audio.play();
             
             songs_event.current_status = "live";

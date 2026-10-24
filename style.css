@@ -90,10 +90,6 @@ body{
     font-weight: 600;
 }
 
-.playlist button:active{
-    color: #00000069;
-}
-
 .song-info{
     padding: 10px 0 10px 10px;
     border: 2px solid #40cc40;
