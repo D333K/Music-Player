@@ -1,0 +1,92 @@
+[
+	{
+
+		"id": 0,
+		"name": "solo",
+		"artist": "clean bandit & demi lovato",
+		"current_status": "idle",
+		"song_src": "Music/Clean Bandit - Solo (feat. Demi Lovato) [Official Video] [8JnfIa84TnU].webm"
+
+	},
+	{
+
+		"id": 0,
+		"name": "eyes closed",
+		"artist": "jisoo & zayn",
+		"current_status": "idle",
+		"song_src": "Music/JISOO X ZAYN - EYES CLOSED (OFFICIAL MV) [EN1tMeXQii0].webm"
+
+	},
+	{
+
+		"id": 0,
+		"name": "a thousand years",
+		"artist": "jhon michael howell & JVKE & ZVC",
+		"current_status": "idle",
+		"song_src": "Music/John Michael Howell, JVKE, ZVC - A Thousand Years (Cinematic Version) [IlW7QgdQfKg].webm"
+
+	},
+	{
+
+		"id": 0,
+		"name": "dangerously",
+		"artist": "charlie puth",
+		"current_status": "idle",
+		"song_src": "Music/Charlie Puth - Dangerously [Official Video] [TBXQu8ORnBQ].webm"
+
+	},
+	{
+
+		"id": 0,
+		"name": "7 rings",
+		"artist": "ariana grande",
+		"current_status": "idle",
+		"song_src": "Music/Ariana Grande - 7 rings (Official Video) [QYh6mYIJG2Y].webm"
+
+	},
+	{
+
+		"id": 0,
+		"name": "the color of you",
+		"artist": "alina baraz - floating ft. khalid",
+		"current_status": "idle",
+		"song_src": "Music/Alina Baraz - Floating ft. Khalid (filous Remix) [Official Audio] [d2ftOyb9FVs].webm"
+
+	},
+	{
+
+		"id": 0,
+		"name": "less than a lover",
+		"artist": "JENNIE",
+		"current_status": "idle",
+		"song_src": "Music/JENNIE - Less than a Lover (Official Video) [_IT83Y_HcAw].webm"
+
+	},
+	{
+
+		"id": 0,
+		"name": "i will survive",
+		"artist": "demi lovato",
+		"current_status": "idle",
+		"song_src": "Music/Demi Lovato - I Will Survive (Lyrics)(MP3_160K).mp3"
+
+	},
+	{
+
+		"id": 0,
+		"name": "cry again",
+		"artist": "Justin Bieber ft ROSÉ (. Hamzan)",
+		"current_status": "idle",
+		"song_src": "Music/Justin Bieber ft ROSÉ (. Hamzan) - (Office Video) [vg8Ygwy5jgY]_24102026.mp3"
+
+	},
+	{
+
+		"id": 0,
+		"name": "another love",
+		"artist": "Justin Bieber ft ROSÉ (. Hamzan)",
+		"current_status": "idle",
+		"song_src": "Music/Justin Bieber ft ROSÉ (. Hamzan) - (Office Video)(MP3_160K).mp3"
+
+	}
+]

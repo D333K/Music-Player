@@ -1,0 +1,24 @@
+This is Repeat SVG icon:
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-repeat preview-icon">
+            <path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/>
+            <path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>
+    </svg>
+
+
+This is Repeat-off SVG icon:
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-repeat-off preview-icon"><path d="M11.656 6H21l-4-4"/>
+            <path d="M17.898 17.898A4 4 0 0 1 17 18H3l4-4"/><path d="m2 2 20 20"/>
+            <path d="M21 13v1a4 4 0 0 1-.171 1.159"/><path d="m21 6-4 4"/>
+            <path d="M3 11v-1a4 4 0 0 1 3.102-3.898"/><path d="m7 22-4-4"/>
+    </svg>
+
+This is Shuffle SVG icon:
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shuffle preview-icon">
+            <path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/>
+            <path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22"/>
+            <path d="M2 6h1.972a4 4 0 0 1 3.6 2.2"/>
+            <path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"/>
+    </svg>

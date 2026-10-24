@@ -56,8 +56,6 @@ const audio = new Audio();
 
 let current_index = 0;
 
-let last_music = [];
-
 let playlist_content = [
     
     {
@@ -67,7 +65,7 @@ let playlist_content = [
         artist: "clean bandit & demi lovato",
         current_status: "idle",
         song_src: "Music/Clean Bandit - Solo (feat. Demi Lovato) [Official Video] [8JnfIa84TnU].webm",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
         
     },
     {
@@ -77,7 +75,7 @@ let playlist_content = [
         artist: "jisoo & zayn",
         current_status: "idle",
         song_src: "Music/JISOO X ZAYN - EYES CLOSED (OFFICIAL MV) [EN1tMeXQii0].webm",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
 
     },
     {
@@ -87,7 +85,7 @@ let playlist_content = [
         artist: "jhon michael howell & JVKE & ZVC",
         current_status: "idle",
         song_src: "Music/John Michael Howell, JVKE, ZVC - A Thousand Years (Cinematic Version) [IlW7QgdQfKg].webm",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
 
     },
     {
@@ -97,7 +95,7 @@ let playlist_content = [
         artist: "charlie puth",
         current_status: "idle",
         song_src: "Music/Charlie Puth - Dangerously [Official Video] [TBXQu8ORnBQ].webm",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
         
     },
     {
@@ -107,7 +105,7 @@ let playlist_content = [
         artist: "ariana grande",
         current_status: "idle",
         song_src: "Music/Ariana Grande - 7 rings (Official Video) [QYh6mYIJG2Y].webm",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
         
     },
     {
@@ -117,7 +115,7 @@ let playlist_content = [
         artist: "alina baraz - floating ft. khalid",
         current_status: "idle",
         song_src: "Music/Alina Baraz - Floating ft. Khalid (filous Remix) [Official Audio] [d2ftOyb9FVs].webm",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
 
     },
     {
@@ -127,7 +125,7 @@ let playlist_content = [
         artist: "JENNIE",
         current_status: "idle",
         song_src: "Music/JENNIE - Less than a Lover (Official Video) [_IT83Y_HcAw].webm",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
         
     },
     {
@@ -137,7 +135,7 @@ let playlist_content = [
         artist: "demi lovato",
         current_status: "idle",
         song_src: "Music/Demi Lovato - I Will Survive (Lyrics)(MP3_160K).mp3",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
 
     },
     {
@@ -147,7 +145,7 @@ let playlist_content = [
         artist: "Justin Bieber ft ROSÉ (. Hamzan)",
         current_status: "idle",
         song_src: "Music/Justin Bieber ft ROSÉ (. Hamzan) - (Office Video) [vg8Ygwy5jgY]_24102026.mp3",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
 
     },
     {
@@ -157,19 +155,9 @@ let playlist_content = [
         artist: "Justin Bieber ft ROSÉ (. Hamzan)",
         current_status: "idle",
         song_src: "Music/Justin Bieber ft ROSÉ (. Hamzan) - (Office Video)(MP3_160K).mp3",
-        song_btn: document.createElement("button"),
+        song_btn: document.createElement("button")
 
     },
-    // {
-
-        //     id: 0,
-        //     name: "attention",
-        //     artist: "charle path",
-        //     current_status: "idle",
-        //     song_src: "https://open.spotify.com/track/5cF0dROlMOK5uNZtivgu50?si=62f573a4788a4e35",
-        //     song_btn: document.createElement("button"),
-        
-    // },
         
 ];
     
@@ -190,7 +178,7 @@ playlist_content.forEach((songs, index) => {
 });
 
 // This List To Save The Last Song Played
-last_music = [
+const last_music = [
     
     {
     
@@ -219,6 +207,25 @@ const duplicate_code = () => {
 
 };
 
+const current_click_song = () => {
+    let weight = window.innerWidth <= 480 ? "900" : "600";
+
+    playlist_content[current_index].song_btn.style.cssText = 
+        `
+            color: #0000ff;
+            font-weight: ${weight};
+        `;;
+        
+};
+
+const previous_click_song = (current_song_index = current_index) => {
+    playlist_content[current_song_index].song_btn.style.cssText =
+        `
+            color: #000000;
+            font-weight: none;
+        `;
+};
+
 // Working Abt That Tomorrow Inshallah You Will find The Solution🤲.
 playlist_content.forEach((songs_event, index) => {
 
@@ -232,16 +239,14 @@ playlist_content.forEach((songs_event, index) => {
         last_music[1].artist = songs_event.artist;
         last_music[1].song_src = songs_event.song_src;
         
-        current_index = index;
-        
         if(last_music[0].id == last_music[1].id){
-
+            
             audio.src = last_music[0].song_src;
-            playlist_content[current_index].song_btn.style.cssText = 
-                `
-                    color: #0000ff;
-                    font-weight: 600;
-                `;
+            
+            current_index = index;
+            
+            current_click_song();
+            
             audio.play();
             
             songs_event.current_status = "live";
@@ -250,11 +255,7 @@ playlist_content.forEach((songs_event, index) => {
             
         }else if(last_music[0].id != last_music[1].id){
 
-            playlist_content[last_music[0].id - 1].song_btn.style.cssText =
-                `
-                    color: #000000;
-                    font-weight: none;
-                `;
+            previous_click_song();
             
             last_music[0].id = last_music[1].id;
             
@@ -263,12 +264,11 @@ playlist_content.forEach((songs_event, index) => {
             last_music[0].song_src = last_music[1].song_src;
             
             audio.src = last_music[0].song_src;
+            
+            current_index = index;
 
-            playlist_content[current_index].song_btn.style.cssText = 
-                `
-                    color: #0000ff;
-                    font-weight: 600;
-                `;
+            current_click_song();
+
             audio.play();
             
             songs_event.current_status = "live";
@@ -284,7 +284,11 @@ playlist_content.forEach((songs_event, index) => {
 // Complete Working On This Tomorrow And Inshallah U'll Get The Solution🤲.
 previous_btn.addEventListener("click", () => {
 
+    previous_click_song();
+
     previous_song();
+            
+    current_click_song();
 
     playlist_content[current_index].current_status = "live";
     current_song.innerText = current_index + 1;
@@ -301,12 +305,14 @@ play_pause_btn.addEventListener("click", () => {
 
     conver_svg = !conver_svg;
     
+    current_click_song();
+
     if(conver_svg){
 
         play_pause_btn.innerHTML = play_svg;
         if(audio.currentTime == 0)
             audio.src = playlist_content[current_index].song_src;
-        
+
         audio.play();
         
         playlist_content[current_index].current_status = "live";
@@ -316,6 +322,7 @@ play_pause_btn.addEventListener("click", () => {
     }else{
      
         play_pause_btn.innerHTML = pause_svg;
+
         audio.pause();
         
         playlist_content[current_index].current_status = "pause";
@@ -328,7 +335,11 @@ play_pause_btn.addEventListener("click", () => {
 
 next_btn.addEventListener("click", () => {
 
+    previous_click_song();
+
     next_song();
+
+    current_click_song();
 
     playlist_content[current_index].current_status = "live";
     current_song.innerText = current_index + 1;
@@ -345,7 +356,12 @@ audio.addEventListener("timeupdate",() => {
     
     if(audio.currentTime >= audio.duration){
 
+        previous_click_song();
+
         next_song();
+
+        current_click_song();
+        
         playlist_content[current_index].current_status = "live";
         
         current_song.innerText = current_index + 1;
