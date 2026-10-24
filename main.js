@@ -140,6 +140,26 @@ let playlist_content = [
         song_btn: document.createElement("button"),
 
     },
+    {
+
+        id: 0,
+        name: "cry again",
+        artist: "Justin Bieber ft ROSÉ (. Hamzan)",
+        current_status: "idle",
+        song_src: "Music/Justin Bieber ft ROSÉ (. Hamzan) - (Office Video) [vg8Ygwy5jgY]_24102026.mp3",
+        song_btn: document.createElement("button"),
+
+    },
+    {
+
+        id: 0,
+        name: "another love",
+        artist: "Justin Bieber ft ROSÉ (. Hamzan)",
+        current_status: "idle",
+        song_src: "Music/Justin Bieber ft ROSÉ (. Hamzan) - (Office Video)(MP3_160K).mp3",
+        song_btn: document.createElement("button"),
+
+    },
     // {
 
         //     id: 0,
