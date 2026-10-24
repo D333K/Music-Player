@@ -351,25 +351,19 @@ next_btn.addEventListener("click", () => {
 
 });
 
+audio.onended = () => {
 
-audio.addEventListener("timeupdate",() => {
+    previous_click_song();
+
+    next_song();
+
+    current_click_song();
     
-    if(audio.currentTime >= audio.duration){
-
-        previous_click_song();
-
-        next_song();
-
-        current_click_song();
-        
-        playlist_content[current_index].current_status = "live";
-        
-        current_song.innerText = current_index + 1;
-        duplicate_code();
-
-    }
-
-});
+    playlist_content[current_index].current_status = "live";
+    
+    current_song.innerText = current_index + 1;
+    duplicate_code();
+}
 
 const next_song = () => {
 
