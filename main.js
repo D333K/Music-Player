@@ -263,7 +263,6 @@ progress_bar.addEventListener("input", () => {
 
     }
 
-
 });
 
 // Complete Working On This Tomorrow And Inshallah U'll Get The Solution🤲.
@@ -327,8 +326,6 @@ play_pause_btn.addEventListener("click", () => {
 });
 
 repeat_btn.addEventListener("click", () => {
-
-    console.log(progress_bar.value);
     
     conver_repeat_btn_svg = !conver_repeat_btn_svg;
 
