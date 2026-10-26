@@ -45,6 +45,23 @@ body{
     font-weight: 500;
 }
 
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    /* border: 1px solid ; */
+    /* margin: 30px auto; */
+    margin: 30px auto 15px auto;
+}
+
+#progress-bar {
+    flex: 1;
+    cursor: pointer;
+    accent-color: #0000ff;
+}
+
 .btn-control{
     /* display: grid; */
     display: flex;

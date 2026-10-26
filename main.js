@@ -8,6 +8,10 @@ const play_pause_btn = document.getElementById("play-pause-btn");
 const next_btn = document.getElementById("next-btn");
 const shuffle_btn = document.getElementById("shuffle-btn");
 
+const progress_bar = document.getElementById("progress-bar");
+const current_time = document.getElementById("current-time");
+const duration_time = document.getElementById("duration-time");
+
 // Convert SVG Variable.
 let conver_repeat_btn_svg = false;
 let conver_play_btn_svg = false;
@@ -226,6 +230,42 @@ const previous_click_song = () => {
         `;
 };
 
+const format_time = (seconds) => {
+
+    const secs = Math.floor(seconds % 60);
+    const minutes = Math.floor(seconds / 60);
+
+    return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0':''}${secs}`;
+
+}
+
+audio.addEventListener("timeupdate", () => {
+
+    if(audio.duration){
+
+        const progress_percent = (audio.currentTime / audio.duration) * 100;
+        progress_bar.value = progress_percent;
+
+        current_time.textContent = format_time(audio.currentTime);
+        duration_time.textContent = format_time(audio.duration);
+
+    }
+    
+});
+
+progress_bar.addEventListener("input", () => {
+
+    if(audio.duration){
+
+        const seek = (progress_bar.value / 100) * audio.duration;
+        
+        audio.currentTime = seek;
+
+    }
+
+
+});
+
 // Complete Working On This Tomorrow And Inshallah U'll Get The Solution🤲.
 previous_btn.addEventListener("click", () => {
 
@@ -288,6 +328,8 @@ play_pause_btn.addEventListener("click", () => {
 
 repeat_btn.addEventListener("click", () => {
 
+    console.log(progress_bar.value);
+    
     conver_repeat_btn_svg = !conver_repeat_btn_svg;
 
     if(conver_repeat_btn_svg){
