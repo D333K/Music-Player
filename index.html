@@ -16,7 +16,30 @@
       </div>
 
       <div class="btn-control">
-        <button id="previous-btn">
+        <button id="repeat-btn" title="Repeat OFF">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-repeat-off preview-icon"
+          >
+            <path d="M11.656 6H21l-4-4" />
+            <path d="M17.898 17.898A4 4 0 0 1 17 18H3l4-4" />
+            <path d="m2 2 20 20" />
+            <path d="M21 13v1a4 4 0 0 1-.171 1.159" />
+            <path d="m21 6-4 4" />
+            <path d="M3 11v-1a4 4 0 0 1 3.102-3.898" />
+            <path d="m7 22-4-4" />
+          </svg>
+        </button>
+
+        <button id="previous-btn" title="Previous Song">
           <svg
             width="24"
             height="24"
@@ -35,7 +58,7 @@
           </svg>
         </button>
 
-        <button id="play-pause-btn">
+        <button id="play-pause-btn" title="Pause Song">
           <svg
             width="24"
             height="24"
@@ -53,7 +76,7 @@
           </svg>
         </button>
 
-        <button id="next-btn">
+        <button id="next-btn" title="Next Song">
           <svg
             width="24"
             height="24"
@@ -71,6 +94,25 @@
             <path d="M3 4v16" />
           </svg>
         </button>
+
+        <button id="shuffle-btn" title="Shuffle OFF">
+          <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 4L9.5 9.5M14.5 14.5L21 21M21 21H16M21 21V16M4 20L21 3"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </div>
 
       <div class="playlist">
@@ -80,7 +122,7 @@
 
       <div class="song-info">
         <p><span>status</span> <span id="status-song">nothing</span></p>
-        <p><span>current song</span> <span id="current-song">nothing</span></p>
+        <p><span>song</span> <span id="current-song">nothing</span></p>
         <p><span>repeat</span> <span id="repeat-song">OFF</span></p>
         <p><span>shuffle</span> <span id="shuffle-song">OFF</span></p>
       </div>
@@ -91,6 +133,6 @@
       <p>Created By <a href="mailto:dside1272@gmail.com">Dark Knight</a></p>
     </footer>
 
-    <script type="module" src="main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
