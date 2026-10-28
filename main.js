@@ -12,6 +12,8 @@ const progress_bar = document.getElementById("progress-bar");
 const current_time = document.getElementById("current-time");
 const duration_time = document.getElementById("duration-time");
 
+const song_cover = document.getElementById("vinyl-record");
+
 // Convert SVG Variable.
 let conver_repeat_btn_svg = false;
 let conver_play_btn_svg = false;
@@ -139,13 +141,13 @@ const button_events = () => {
                 audio.src = playlist_content[current_index].song_src;
                 
                 audio.play();
-                
+                                
                 songs_event.current_status = "live";
                 current_song.innerText = current_index + 1;
                 song_info();
                 
             }else if(current_index != index){
-
+                
                 previous_click_song();
                 
                 current_index = index;
@@ -153,14 +155,17 @@ const button_events = () => {
                 current_click_song();
                 
                 audio.src = playlist_content[current_index].song_src;
-
+                
                 audio.play();
+
                 
                 songs_event.current_status = "live";
                 current_song.innerText = current_index + 1;
                 song_info();
                 
             }
+
+            song_cover.classList.add("vinyl-record-animation");
             
         });
 
@@ -278,7 +283,9 @@ previous_btn.addEventListener("click", () => {
     current_song.innerText = current_index + 1;
     
     song_info();
-    
+
+    song_cover.classList.add("vinyl-record-animation");
+
     conver_play_btn_svg = true;
     play_pause_btn.innerHTML = play_svg;
 
@@ -288,6 +295,8 @@ previous_btn.addEventListener("click", () => {
 const play_pause_fun = () => {
     
     conver_play_btn_svg = !conver_play_btn_svg;
+    
+    song_cover.classList.toggle("vinyl-record-animation");
     
     if(conver_play_btn_svg){
 
@@ -300,7 +309,7 @@ const play_pause_fun = () => {
             audio.src = playlist_content[current_index].song_src;
 
         audio.play();
-        
+                
         playlist_content[current_index].current_status = "live";
         current_song.innerText = current_index + 1;
         song_info();
@@ -317,10 +326,11 @@ const play_pause_fun = () => {
         song_info();
         
     }
+
 }
 
 play_pause_btn.addEventListener("click", () => {
-
+    
     play_pause_fun();
 
 });
@@ -386,6 +396,8 @@ next_btn.addEventListener("click", () => {
     
     song_info();
 
+    song_cover.classList.add("vinyl-record-animation");
+
     conver_play_btn_svg = true;
     play_pause_btn.innerHTML = play_svg;
 
@@ -410,13 +422,15 @@ audio.onended = () => {
     }else{
 
         next_song();
-    
+        
     }
-
+    
     current_click_song();
     
     playlist_content[current_index].current_status = "live";
     
+    song_cover.classList.add("vinyl-record-animation");
+
     current_song.innerText = current_index + 1;
     song_info();
 }

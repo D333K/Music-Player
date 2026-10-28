@@ -30,10 +30,31 @@ body{
     border-radius: 12px;
 }
 
+
 #title{
     text-align: center;
     line-height: 1.6;
     border-bottom: 2px solid #40cc40;
+}
+
+.vinyl-record-style{
+    width: 40%;
+    /* margin-top: 20px; */
+    display: flex;
+    border-radius: 50%;
+    justify-self: center;
+}
+@keyframes rotation_cover{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+.vinyl-record-animation{
+    animation: rotation_cover 1.5s linear infinite;
 }
 
 .article-info p{
@@ -63,16 +84,12 @@ body{
 }
 
 .btn-control{
-    /* display: grid; */
     display: flex;
     justify-content: space-around;
-    /* grid-template-columns: repeat(3, 1fr); */
     margin: 35px 0;
     padding: 10px 0;
     border: 2px solid #40cc40;
     border-radius: 14px;
-    /* border-top: 1px solid #40cc40; */
-    /* border-bottom: 1px solid #40cc40; */
 }
 
 .btn-control button{
@@ -93,7 +110,15 @@ body{
 
 .playlist{
     min-height: 100px;
+    max-height: 400px;
     margin: 10px 0;
+    overflow: auto;
+}
+
+.playlist h2{
+    position: sticky;
+    top: 20px;
+    backdrop-filter: blur(10px);
 }
 
 .playlist button{
@@ -146,6 +171,10 @@ footer a:hover{
 @media (max-width: 480px){
     .container{
         width: 90%;
+    }
+    .playlist{
+        min-height: 100px;
+        max-height: 250px;
     }
     .article-info p{
         font-weight: 900;
