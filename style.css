@@ -1,3 +1,7 @@
+:root{
+    --rotate-angle: 0deg;
+}
+
 *{
     text-transform: capitalize;
     box-sizing: border-box;
@@ -43,13 +47,15 @@ body{
     display: flex;
     border-radius: 50%;
     justify-self: center;
+    --rotate-angle: 0deg;
+    rotate: var(--rotate-angle);
 }
 @keyframes rotation_cover{
     from{
-        rotate: 0deg;
+        rotate: var(--rotate-angle);
     }
     to{
-        rotate: 360deg;
+        rotate: calc(var(--rotate-angle) + 360deg);
     }
 }
 

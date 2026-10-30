@@ -12,7 +12,7 @@ const progress_bar = document.getElementById("progress-bar");
 const current_time = document.getElementById("current-time");
 const duration_time = document.getElementById("duration-time");
 
-const song_cover = document.getElementById("vinyl-record");
+const vinyl_record = document.getElementById("vinyl-record");
 
 // Convert SVG Variable.
 let conver_repeat_btn_svg = false;
@@ -102,7 +102,7 @@ const audio = new Audio();
 
 let current_index = 0;
 
-let playlist_content = []
+let playlist_content = [];
 
 const display_playlist = () => {
 
@@ -165,7 +165,7 @@ const button_events = () => {
                 
             }
 
-            song_cover.classList.add("vinyl-record-animation");
+            vinyl_record.classList.add("vinyl-record-animation");
             
         });
 
@@ -284,7 +284,7 @@ previous_btn.addEventListener("click", () => {
     
     song_info();
 
-    song_cover.classList.add("vinyl-record-animation");
+    vinyl_record.classList.add("vinyl-record-animation");
 
     conver_play_btn_svg = true;
     play_pause_btn.innerHTML = play_svg;
@@ -296,7 +296,11 @@ const play_pause_fun = () => {
     
     conver_play_btn_svg = !conver_play_btn_svg;
     
-    song_cover.classList.toggle("vinyl-record-animation");
+    const vinyl_record_rotate = window.getComputedStyle(vinyl_record);
+
+    const get_vinyl_record_rotate = vinyl_record_rotate.getPropertyValue("rotate");
+
+    vinyl_record.classList.toggle("vinyl-record-animation");
     
     if(conver_play_btn_svg){
 
@@ -315,6 +319,9 @@ const play_pause_fun = () => {
         song_info();
         
     }else{
+
+        vinyl_record.style.setProperty("--rotate-angle", get_vinyl_record_rotate);
+
         play_pause_btn.title = "Pause Song";
 
         play_pause_btn.innerHTML = pause_svg;
@@ -396,7 +403,7 @@ next_btn.addEventListener("click", () => {
     
     song_info();
 
-    song_cover.classList.add("vinyl-record-animation");
+    vinyl_record.classList.add("vinyl-record-animation");
 
     conver_play_btn_svg = true;
     play_pause_btn.innerHTML = play_svg;
@@ -429,7 +436,7 @@ audio.onended = () => {
     
     playlist_content[current_index].current_status = "live";
     
-    song_cover.classList.add("vinyl-record-animation");
+    vinyl_record.classList.add("vinyl-record-animation");
 
     current_song.innerText = current_index + 1;
     song_info();
