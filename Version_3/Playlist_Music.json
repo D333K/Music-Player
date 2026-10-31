@@ -3,7 +3,6 @@
 
 		"id": 0,
 		"name": "solo",
-		"cover": "51xjKVPpeNL._UXNaN_FMjpg_QL85_.jpg",
 		"artist": "clean bandit & demi lovato",
 		"current_status": "idle",
 		"song_src": "Music/Clean Bandit - Solo (feat. Demi Lovato) [Official Video] [8JnfIa84TnU].webm"
@@ -12,7 +11,6 @@
 	{
 		
 		"id": 0,
-		"cover": "51xjKVPpeNL._UXNaN_FMjpg_QL85_.jpg",
 		"name": "eyes closed",
 		"artist": "jisoo & zayn",
 		"current_status": "idle",
@@ -22,7 +20,6 @@
 	{
 		
 		"id": 0,
-		"cover": "51xjKVPpeNL._UXNaN_FMjpg_QL85_.jpg",
 		"name": "a thousand years",
 		"artist": "jhon michael howell & JVKE & ZVC",
 		"current_status": "idle",
@@ -32,7 +29,6 @@
 	{
 		
 		"id": 0,
-		"cover": "51xjKVPpeNL._UXNaN_FMjpg_QL85_.jpg",
 		"name": "dangerously",
 		"artist": "charlie puth",
 		"current_status": "idle",
@@ -42,7 +38,6 @@
 	{
 		
 		"id": 0,
-		"cover": "51xjKVPpeNL._UXNaN_FMjpg_QL85_.jpg",
 		"name": "7 rings",
 		"artist": "ariana grande",
 		"current_status": "idle",
@@ -52,7 +47,6 @@
 	{
 		
 		"id": 0,
-		"cover": "51xjKVPpeNL._UXNaN_FMjpg_QL85_.jpg",
 		"name": "the color of you",
 		"artist": "alina baraz - floating ft. khalid",
 		"current_status": "idle",
@@ -62,7 +56,6 @@
 	{
 		
 		"id": 0,
-		"cover": "51xjKVPpeNL._UXNaN_FMjpg_QL85_.jpg",
 		"name": "less than a lover",
 		"artist": "JENNIE",
 		"current_status": "idle",
@@ -72,7 +65,6 @@
 	{
 		
 		"id": 0,
-		"cover": "51xjKVPpeNL._UXNaN_FMjpg_QL85_.jpg",
 		"name": "i will survive",
 		"artist": "demi lovato",
 		"current_status": "idle",
@@ -82,7 +74,6 @@
 	{
 		
 		"id": 0,
-		"cover": "51xjKVPpeNL._UXNaN_FMjpg_QL85_.jpg",
 		"name": "cry again",
 		"artist": "Justin Bieber ft ROSÉ (. Hamzan)",
 		"current_status": "idle",
@@ -92,11 +83,19 @@
 	{
 		
 		"id": 0,
-		"cover": "hqdefault.jpg",
 		"name": "another love",
 		"artist": "Justin Bieber ft ROSÉ (. Hamzan)",
 		"current_status": "idle",
 		"song_src": "Music/Justin Bieber ft ROSÉ (. Hamzan) - (Office Video)(MP3_160K).mp3"
+
+	},
+	{
+		
+		"id": 0,
+		"name": "shivers",
+		"artist": "Ed Sheeran",
+		"current_status": "idle",
+		"song_src": "Music/Ed_Sheeran_Shivers.mp3"
 
 	}
 ]
