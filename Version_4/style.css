@@ -96,7 +96,7 @@ button {
   margin: 0 0 24px;
   padding-bottom: 16px;
   text-align: left;
-  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--line);
@@ -104,9 +104,8 @@ button {
 
 .article-info {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
-  gap: 34px;
   min-height: 280px;
 }
 
@@ -114,6 +113,7 @@ button {
   width: 280px;
   aspect-ratio: 1;
   display: block;
+  justify-self: center;
   object-fit: cover;
   border: 7px solid rgba(255, 255, 255, 0.07);
   border-radius: 50%;
@@ -138,13 +138,15 @@ button {
 
 .article-info p {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  width: min(520px, 100%);
   gap: 6px;
   margin: 12px 0;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 18px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .article-info p + p {
@@ -153,7 +155,7 @@ button {
 }
 
 .article-info span:first-child {
-  font-size: 0.68rem;
+  font-size: 0.96rem;
   font-weight: 700;
   color: #777b8d;
 }
@@ -161,7 +163,7 @@ button {
 .article-info span:last-child {
   min-height: 1.35em;
   color: var(--text);
-  font-size: clamp(1.1rem, 3vw, 1.45rem);
+  font-size: 1.39rem;
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: 0;
@@ -176,7 +178,7 @@ button {
   gap: 12px;
   margin: 28px 0 18px;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.92rem;
   font-weight: 700;
   text-align: center;
 }
@@ -312,7 +314,7 @@ footer a:focus-visible {
   color: var(--muted);
   background: rgba(18, 20, 31, 0.94);
   border-bottom: 1px solid var(--line);
-  font-size: 0.78rem;
+  font-size: 0.98rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   backdrop-filter: blur(12px);
@@ -336,7 +338,7 @@ footer a:focus-visible {
   padding: 11px 12px;
   border-radius: 10px;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.90rem;
   text-align: left;
   transition:
     color 180ms ease,
@@ -360,6 +362,17 @@ footer a:focus-visible {
   color: var(--text);
   background: rgba(255, 255, 255, 0.055);
   transform: translateX(3px);
+}
+
+.playlist button.active {
+  color: var(--accent);
+  font-weight: 700;
+  background: var(--accent-soft);
+}
+
+.playlist button.active::before {
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(255, 122, 92, 0.55);
 }
 
 .song-info {
@@ -388,7 +401,7 @@ footer a:focus-visible {
 
 .song-info span:first-child {
   color: #777b8d;
-  font-size: 0.62rem;
+  font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -410,7 +423,7 @@ footer a:focus-visible {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 0.78rem;
+  font-size: 0.88rem;
 }
 
 footer {
@@ -419,7 +432,7 @@ footer {
   justify-content: space-between;
   margin-top: 22px;
   color: #737788;
-  font-size: 0.72rem;
+  font-size: 0.80rem;
   letter-spacing: 0.04em;
 }
 
@@ -470,6 +483,12 @@ footer a:hover {
 
   .article-info p + p {
     padding-top: 10px;
+  }
+
+  .article-info span:last-child {
+    /* font-size: 0.99rem; */
+    /* font-size: 1.35rem; */
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
   }
 
   .progress-container {
