@@ -215,24 +215,12 @@ const song_info = () => {
 };
 
 const current_click_song = () => {
-
-    let weight = window.innerWidth <= 480 ? "900" : "600";
-
-    playlist_content[current_index].song_btn.style.cssText = 
-        `
-            color: #0000ff;
-            font-weight: ${weight};
-        `;
+    playlist_content[current_index].song_btn.classList.add("active");
         
 };
 
 const previous_click_song = () => {
-
-    playlist_content[current_index].song_btn.style.cssText =
-        `
-            color: #a6a8b7;
-            font-weight: none;
-        `;
+    playlist_content[current_index].song_btn.classList.remove("active");
 };
 
 const format_time = (seconds) => {
