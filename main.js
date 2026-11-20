@@ -230,7 +230,7 @@ const previous_click_song = () => {
 
     playlist_content[current_index].song_btn.style.cssText =
         `
-            color: #000000;
+            color: #a6a8b7;
             font-weight: none;
         `;
 };
